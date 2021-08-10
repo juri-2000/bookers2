@@ -32,8 +32,9 @@ class BooksController < ApplicationController
     @newbook =Book.new
     @books =Book.all
     @book =Book.find(params[:id])
+    @book_comment = BookComment.new
     @users = User.all
-    @user =current_user.id
+    # @user =current_user.id
     @user =@book.user
   end
 
